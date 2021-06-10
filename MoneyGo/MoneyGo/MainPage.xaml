@@ -1,24 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MoneyGo.MainPage">
+             x:Class="MoneyGo.MainPage"
+             BackgroundImage="hero_1.jpg">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+    <StackLayout Orientation="Vertical">
+        <ScrollView x:Name="MainScroll" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout>
+
+                <StackLayout BackgroundColor="#636361" Padding="100">
+                    <Image Source="hero_1.jpg"/>
+                    <Label Text="Money Go!" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" Padding="5" TextColor="DarkOrange" FontSize="35"/>
+
+
+                    <StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout Orientation="Vertical"  HorizontalOptions="CenterAndExpand">
+                            <Button Text="Iniciar Sesion" BackgroundColor="DarkOrange" TextColor="white" CornerRadius="30" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical"  HorizontalOptions="CenterAndExpand">
+                            <Button Text="Registrarse" BackgroundColor="DarkOrange" TextColor="white" CornerRadius="30" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+                <Label Text="Con Money Go! sabrás cuanto gastas o ingresas de una manera sencilla." FontSize="Large" Padding="30,10,30,10"/>
+                <Label Text="Gracias a su interfaz sencilla podrás ver con exactiutd tus gastos." FontSize="16" Padding="30,0,30,0"/>
+              
+            </StackLayout>
+
+        </ScrollView>
     </StackLayout>
-
 </ContentPage>
